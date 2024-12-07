@@ -6,7 +6,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:red_bus_atts/model/user_model/user_model.dart';
 
 class UserService{
-
+ 
+ //To save user detail in the firestore
   Future<void> saveUserToDatabase({required UserModel usermodel}) async {
     try {
       await FirebaseFirestore.instance

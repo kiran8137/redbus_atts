@@ -9,6 +9,7 @@ import 'package:red_bus_atts/view/screens/main_page/main_page.dart';
 import 'package:red_bus_atts/view/screens/auth_screens/register_screen/register_screen.dart';
 import 'package:red_bus_atts/view/widgets/custom_button.dart';
 import 'package:red_bus_atts/view/widgets/custom_text_field.dart';
+import 'package:red_bus_atts/view/widgets/not_user_widget.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -73,6 +74,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                   //custom text field. password field
                   CustomTextField(
+                    obsureText: true,
                     controller: passwordController,
                     validator: (value) {
                       final regExp = RegExp(
@@ -104,50 +106,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   SizedBox(
                     height: ScreenUtils.screenWidth(context) * 0.01,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Not a user",
-                          style: GoogleFonts.poppins(
-                            fontSize: ScreenUtils.screenWidth(context) * 0.03,
-                            fontWeight: FontWeight.w500,
-                          )),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const RegisterScreen()));
-                        },
-                        child: Text("Register",
-                            style: GoogleFonts.poppins(
-                                fontSize:
-                                    ScreenUtils.screenWidth(context) * 0.04,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.blue)),
-                      ),
-                       SizedBox(width: ScreenUtils.screenWidth(context)*0.01),
-                       Text("|",
-                          style: GoogleFonts.poppins(
-                            fontSize: ScreenUtils.screenWidth(context) * 0.03,
-                            fontWeight: FontWeight.w500,
-                          )),
-                        SizedBox(width: ScreenUtils.screenWidth(context)*0.01),
-                        GestureDetector(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgetPasswordScreen()));
-                          },
-                          child: Text("Forget password",
-                              style: GoogleFonts.poppins(
-                                  fontSize:
-                                      ScreenUtils.screenWidth(context) * 0.03,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.blue)),
-                        ),
-                        
-                    ],
-                  )
+
+                  const NotAUserWidget()
                 ],
               ),
             ),

@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:red_bus_atts/view/screens/main_page/homee_page/home_page.dart';
-import 'package:red_bus_atts/view/screens/main_page/profile_screen/page_screen.dart';
+import 'package:red_bus_atts/view/screens/main_page/profile_screen/profile_screen.dart';
 
 class HelperFunction {
 

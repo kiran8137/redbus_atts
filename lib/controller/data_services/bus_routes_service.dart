@@ -12,7 +12,7 @@ class BusRoutesService{
 
   BusRoutesService({required this.fireStore});
 
-   
+   //To fetch featured bus route 
    Future<List<BusRouteModel>> getFeaturedBusRoute()async{
 
     try{
@@ -25,7 +25,7 @@ class BusRoutesService{
     }
    }
 
-
+   // To search bus routes 
    Future<List<BusRouteModel>> searchedRoutes({required String? query})async{
 
     try{

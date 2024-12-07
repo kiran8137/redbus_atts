@@ -15,7 +15,7 @@ final FirebaseAuth fireabaseAuth;
 
   AuthServices({required this.fireabaseAuth});
 
-
+  //To register a new user
   Future<UserCredential?> registerUser({required String emailId, required String password,})async{
    
    try{
@@ -32,7 +32,7 @@ final FirebaseAuth fireabaseAuth;
 
   }
 
-
+  //To sigin already registered user
   Future<User?> sigInUser({required String emailId, required String password})async{
 
     try{
@@ -55,7 +55,7 @@ final FirebaseAuth fireabaseAuth;
   }
 
 
-
+ //To reset password
   Future<void> resetPassword({required String email}) async {
      
      try{
@@ -65,7 +65,8 @@ final FirebaseAuth fireabaseAuth;
       log(error.toString());
      }
   }
-
+ 
+ //to save user log in or not in shared preferences
   Future<void> saveUserLoggedstatus({required bool value})async{
 
     try{
@@ -78,7 +79,7 @@ final FirebaseAuth fireabaseAuth;
   }
 
   
-
+ // To get know whether user logout from app or not
   Future<bool> getUserLoggedStatus()async{
     final sharedPref = await SharedPreferences.getInstance();
     try{
@@ -95,7 +96,7 @@ final FirebaseAuth fireabaseAuth;
     }
   }
 
-
+   //To check whether the user is already registered or not with the email id
    Future<String> checkUserAlreadyRegistered(
       {required String? emailid}) async {
     try {

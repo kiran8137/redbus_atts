@@ -11,7 +11,8 @@ class BusService{
   final FirebaseFirestore firebaseFirestore;
 
   BusService({required this.firebaseFirestore});
-
+  
+  //To fetch buses in the particular route
   Future<List<BusModel>> getBuses({required routeId})async{
     try{
      final snapshot = await firebaseFirestore.collection('busList').where('routeId',isEqualTo: routeId).get();
@@ -26,7 +27,8 @@ class BusService{
       throw Exception();
     }
   }
-
+ 
+ //To get a bus route detail with the given routeId
   Future<BusRouteModel> getBusRouteDetail({required String routeId})async{
     try{
      final result = await firebaseFirestore.collection('busRoutes').doc(routeId).get();

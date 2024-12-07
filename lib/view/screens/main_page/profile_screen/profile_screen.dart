@@ -16,6 +16,12 @@ class ProfileScreen extends StatelessWidget {
      body: SafeArea(
       child: Column(
         children: [
+          Center(
+            child: CircleAvatar(
+              child: Icon(Icons.person),
+            ),
+          ),
+          
           ListTile(
             leading: Icon(Icons.logout),
             title: Text("logout",

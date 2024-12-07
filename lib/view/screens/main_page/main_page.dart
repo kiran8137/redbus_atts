@@ -25,11 +25,11 @@ class MainPage extends StatelessWidget {
         color: AppColorConstants.primaryColor,
         
         backgroundColor: AppColorConstants.surfaceColor,
-        animationDuration: Duration(milliseconds: 300),
+        animationDuration: const Duration(milliseconds: 300),
         index: navigatorbarProvider.currentPage,
-        items:  [
-            ImageIcon(AssetImage("assets/redbuslogo.png")),
-           Icon(Icons.person)
+        items:const[
+             ImageIcon(AssetImage("assets/redbuslogo.png")),
+             Icon(Icons.person)
           ],
           onTap: (int index){
             navigatorbarProvider.setCurrentPage(index);
