@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405250285596",
+    "project_id": "redbus-atts",
+    "storage_bucket": "redbus-atts.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405250285596:android:9fa5016f7c227a933a7fd9",
+        "android_client_info": {
+          "package_name": "com.example.red_bus_atts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ_tw1Pt8p7VGN3tfPyDQ3qrL0NxHeBSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
